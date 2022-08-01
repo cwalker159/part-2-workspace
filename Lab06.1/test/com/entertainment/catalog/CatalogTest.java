@@ -99,9 +99,7 @@ public class CatalogTest {
   @Test
   public void testSortByVolume() {
     List<Television> tvs = new ArrayList<>(Catalog.getInventory());
-    tvs.sort((tv1, tv2) -> {
-      return tv1.getVolume() - tv2.getVolume();
-    });
+    tvs.sort(Comparator.comparingInt(Television::getVolume).reversed());
     System.out.println(tvs);
   }
 }
