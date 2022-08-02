@@ -14,6 +14,7 @@ package com.fastjava.annotation;
  * If declared at the individual method level, that particular method will be faster.
  * If declared at both levels, any method-level declaration will override the type-level declaration.
  */
+
 public @interface Fast {
   /**
    * Performance boost, expressed as a decimal, ranging from 0.0 (no boost) to 1.0 (100% faster).
